@@ -46,3 +46,8 @@ This project was developed to strengthen my practical React.js skills, particula
 * Add pronunciation audio controls
 * Add autocomplete suggestions
 * Add localStorage support
+
+
+### Live Demo 
+
+URL - https://dictionarylive.netlify.app/
