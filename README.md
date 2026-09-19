@@ -1,42 +1,48 @@
-# Dictationary — dictionary with voice dictation (demo)
+# Dictionary App 📖
 
-A single-page **React + Vite** dictionary. Type a word — or tap the mic and
-say it — and get live definitions, examples, and pronunciation.
+A responsive and user-friendly **Dictionary App built with React.js** that allows users to search for English words and view their definitions, meanings, examples, phonetics, and pronunciation.
 
-```bash
-npm install
-npm run dev      # http://localhost:5173
-npm run build
-npm run lint
-```
+The application integrates a **Dictionary REST API** to fetch real-time word information and displays the results in a clean and simple interface.
 
-## How it works
+### Key Features
 
-- **Definitions** — fetched live from the keyless, CORS-enabled
-  [Wiktionary REST API](https://en.wiktionary.org/api/rest_v1/). Results are
-  cached per word for the session. Unknown words fall back to Wiktionary's
-  `opensearch` for "Did you mean…" suggestions.
-- **Clickable definitions** — Wiktionary returns HTML; `RichText.jsx` rebuilds
-  it as React nodes (no `dangerouslySetInnerHTML`) and turns every wiki link
-  into a button that looks that word up.
-- **Voice dictation** — `useDictation` wraps the browser Web Speech API
-  (Chrome / Edge / Safari). Interim transcript streams into the search box;
-  the finished phrase triggers the lookup. Hidden where unsupported.
-- **Pronunciation** — recorded audio when available, otherwise
-  `speechSynthesis` reads the word aloud.
-- **Optional enrichment** — IPA, audio, synonyms and antonyms come from
-  dictionaryapi.dev with a 4s timeout; if it's unreachable the entry simply
-  renders without them.
-- **Wordbook** — Recent lookups (resolved words only) and Saved words persist
-  in one `localStorage` key (`dictationary:wordbook:v1`).
-- **Word of the day** — deterministic per calendar day from `src/data/words.js`.
+* 🔍 Search for English words
+* 📚 Display word definitions and meanings
+* 💬 Show example sentences
+* 🔊 Display phonetics and pronunciation
+* ⚠️ Handle invalid words and API errors
+* 📱 Responsive design for different screen sizes
+* ⚡ Fast API-based search
 
-## Structure
+### Technologies Used
 
-| Concern | Where |
-| --- | --- |
-| Lookup, cache, suggestions, enrichment | `src/hooks/useDefinition.js` |
-| Speech recognition | `src/hooks/useDictation.js` |
-| Recent + saved words | `src/hooks/useWordbook.js` |
-| Entry card, search bar, sidebar, home | `src/components/` |
-| Word-of-the-day list | `src/data/words.js` |
+* React.js
+* JavaScript (ES6+)
+* HTML5
+* CSS3
+* REST API
+* Fetch API
+* React Hooks (`useState`)
+
+### React Concepts Practiced
+
+* State management with `useState`
+* Event handling
+* API integration
+* `async/await`
+* Error handling
+* Conditional rendering
+* Working with JSON data
+
+### Project Purpose
+
+This project was developed to strengthen my practical React.js skills, particularly **API integration, asynchronous operations, state management, error handling, and responsive frontend development**.
+
+### Future Improvements
+
+* Add search history
+* Add favorite words
+* Add dark mode
+* Add pronunciation audio controls
+* Add autocomplete suggestions
+* Add localStorage support
